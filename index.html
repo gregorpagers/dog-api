@@ -4,20 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <label for="breed">Choose your favorite dog breed: </label>
-    <select id="breed">
-        <option value="">-- --</option>
-    </select>
-    <button>&#8635;</button>
-    <div>
-        <img src="" alt="">
-    </div>
-    <div class="info">&#x24D8;</div>
-    <div>the site uses <a href="https://dog.ceo/dog-api" target="_blank">dog-api</a> </div>
+    <main>
+        <div class="form-place">
+            <label for="breed">Choose your favorite dog breed: </label>
+            <select id="breed">
+                <option value="akita"></option>
+            </select>
+            <button>&#8635;</button>
+        </div>
+        <div class="image-place">
+            <img src="" alt="">
+        </div>
+        <div class="info-button">&#x24D8;</div>
+        <div class="info-overlay"><span class="info-close">&#215;</span>
+            <p>The site uses <a href="https://dog.ceo/dog-api" target="_blank">dog-api</a></p>
+        </div>
+    </main>
+
+
     <script src="script.js"></script>
 </body>
 

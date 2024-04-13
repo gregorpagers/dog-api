@@ -6,7 +6,9 @@ const selectDog = document.querySelector('select');
 const img = document.querySelector('img');
 const refreshBtn = document.querySelector('button');
 let breedName = '';
-const info = document.querySelector('.info');
+const info = document.querySelector('.info-button');
+const infoMessage = document.querySelector('.info-overlay');
+const infoClose = document.querySelector('.info-close');
 
 const appLi = (liItemText) => {
     const liItem = document.createElement('li');
@@ -41,8 +43,7 @@ fetch(URLBreeds)
     .catch(err => console.error(err));
 
 const showInfo = () => {
-    //dać klasę active na okienko które będzie na środku
-    console.log("info")
+    infoMessage.classList.toggle('active');
 }
 selectDog.addEventListener('change', (e) => {
     breedName = e.target.value;
@@ -50,3 +51,5 @@ selectDog.addEventListener('change', (e) => {
 })
 refreshBtn.addEventListener('click', () => { displayImage(breedName) });
 info.addEventListener('click', showInfo);
+infoClose.addEventListener('click', showInfo);
+document.onload = displayImage('akita');
